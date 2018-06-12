@@ -2,7 +2,7 @@
 
 The Micro CMS for record labels.
 
-A tiny CMS tailor-made for record labels. Made with Angular 6 and Firebase. No traditional backend needed. Super-responsive layout.
+A tiny CMS tailor-made for record labels. PWA made with Angular 6 and Firebase. No traditional backend needed. Super-responsive layout.
 
 
 ## Development
