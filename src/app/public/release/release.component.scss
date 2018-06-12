@@ -1,0 +1,21 @@
+@import '../../../variables.scss';
+
+.releaseContainer {
+  position: relative;
+  margin: 8px;
+}
+
+.releaseData {
+  background-color: map-get($mat-cfm, A400);
+  opacity: 0.8;
+  position: absolute;
+  left: 8px;
+}
+
+.artist {
+  top: 8px;
+}
+
+.title {
+  top: 48px;
+}

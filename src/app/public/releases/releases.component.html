@@ -1,0 +1,56 @@
+<app-header></app-header>
+
+<!-- XS -->
+<div  fxLayoutAlign="space-evenly center"
+      fxLayout.xs="column"
+      fxHide.sm
+      fxHide.md
+      fxHide.lg
+      fxHide.xl
+      >
+  <div *ngFor="let release of releases | async">
+    <app-release [release]="release"></app-release>
+  </div>
+</div>
+<!-- SM + MD -->
+<div  fxLayoutAlign="space-evenly center"
+      fxHide.xs
+      fxLayout.sm="column"
+      fxLayout.md="column"
+      fxHide.lg
+      fxHide.xl
+      >
+  <div *ngFor="let release of releases | async as resolvedRelease; index as i">
+    <div *ngIf="i % 2 === 0">
+      <div fxFlex="50%">
+        <app-release [release]="resolvedRelease[i]"></app-release>
+      </div>
+      <div fxFlex="50%">
+        <app-release [release]="resolvedRelease[i+1]"></app-release>
+      </div>
+    </div>
+  </div>
+
+</div>
+<!-- LG + XL -->
+<div  fxLayoutAlign="space-evenly center"
+      fxHide.xs
+      fxHide.sm
+      fxHide.md
+      fxLayout.lg="column"
+      fxLayout.xl="column"
+      >
+  <div *ngFor="let release of releases | async as resolvedRelease; let i = index">
+    <div *ngIf="i % 3 === 0">
+      <div fxFlex="33.33%">
+        <app-release [release]="resolvedRelease[i]"></app-release>
+      </div>
+      <div fxFlex="33.33%">
+        <app-release [release]="resolvedRelease[i+1]"></app-release>
+      </div>
+      <div fxFlex="33.33%">
+          <app-release [release]="resolvedRelease[i+2]"></app-release>
+        </div>
+      </div>
+  </div>
+</div>

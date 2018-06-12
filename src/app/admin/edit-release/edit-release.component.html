@@ -1,0 +1,56 @@
+<app-header></app-header>
+<div>
+  <h2>LabelMejt - Add Release</h2>
+  <form class="edit-release-form">
+    <div class="container">
+      <mat-form-field>
+          <mat-select name="artist" placeholder="Artist" [(ngModel)]="model.artist">
+            <mat-option *ngFor="let artist of artists | async" [value]="artist.name">
+              {{artist.name}}
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+      <mat-form-field>
+        <input matInput name="title" placeholder="Title" [(ngModel)]="model.title">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="catalogNumber" placeholder="Catalog Number" [(ngModel)]="model.catalogNumber">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="releaseDate" placeholder="Release Date (YYYY-MM-DD)" [(ngModel)]="model.releaseDate">
+      </mat-form-field>
+      <mat-form-field>
+        <textarea class="description" matInput matTextareaAutosize matAutosizeMinRows="5" matAutosizeMaxRows="15"
+                  name="description" placeholder="Description" [(ngModel)]="model.description">
+        </textarea>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="bandcampReleaseId" placeholder="Bandcamp release id" [(ngModel)]="model.bandcampReleaseId">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="bandcampUrl" placeholder="Bandcamp URL" [(ngModel)]="model.bandcampUrl">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="beatportUrl" placeholder="Beatport URL" [(ngModel)]="model.beatportUrl">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="iTunesUrl" placeholder="iTunes URL" [(ngModel)]="model.iTunesUrl">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="junoUrl" placeholder="Juno URL" [(ngModel)]="model.junoUrl">
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="spotifyUrl" placeholder="Spotify URL" [(ngModel)]="model.spotifyUrl">
+      </mat-form-field>
+      <div>
+        <button mat-raised-button class="choose-cover-file-button" (click)="openFileBrowser()">Choose cover file</button>
+      </div>
+      <input type="file" id="coverFileInput" #coverFileInput placeholder="Upload file..." (change)="coverFileSelected()" style="display: none;" />
+      <img *ngIf="model.base64EncodedFile" width="100%" src="data:image/png;base64,{{model.base64EncodedFile}}">
+      <div class="footer">
+        <mat-divider></mat-divider>
+        <button mat-raised-button class="save-button" (click)="saveRelease()">Save</button>
+      </div>
+    </div>
+  </form>
+</div>

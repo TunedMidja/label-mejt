@@ -1,0 +1,85 @@
+//@import '~@angular/material/prebuilt-themes/indigo-pink.css';
+@import './crystal-fake-music-theme.scss';
+
+@font-face {
+  font-family: 'Lane - Narrow';
+  src: url('./assets/fonts/Lane-Narrow.eot');
+  src: url('./assets/fonts/Lane-Narrow.eot?#iefix') format('embedded-opentype'),
+      url('./assets/fonts/Lane-Narrow.woff2') format('woff2'),
+      url('./assets/fonts/Lane-Narrow.woff') format('woff'),
+      url('./assets/fonts/Lane-Narrow.ttf') format('truetype'),
+      url('./assets/fonts/Lane-Narrow.svg#Lane-Narrow') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+
+$cfm-theme-contrast: map-get($mat-cfm, contrast);
+$input-filed-text-color: map-get($cfm-theme-contrast, 500);
+
+body {
+  background-color: map-get($mat-cfm, A700);
+  color: map-get($mat-cfm, 50);
+}
+
+body, .mat-form-field, .mat-select, .mat-option, .mat-button, .mat-fab, .mat-flat-button, .mat-icon-button, .mat-mini-fab, .mat-raised-button, .mat-stroked-button, .mat-input-element {
+  font-family: 'Lane - Narrow', 'Helvetica Neue', sans-serif !important;
+  letter-spacing: 2px;
+  //font-size: 115%;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: map-get($mat-cfm, 800);
+  margin: 8px;
+}
+
+h3 {
+  color: map-get($mat-cfm, 600);
+  margin: 8px;
+}
+
+h4 {
+  color: map-get($mat-cfm, 400);
+  margin: 8px;
+}
+
+h5 {
+  color: map-get($mat-cfm, 200);
+  margin: 8px;
+}
+
+a {
+  color: map-get($mat-cfm, 500);
+}
+
+.mat-button, .mat-fab, .mat-icon-button, .mat-mini-fab, .mat-raised-button {
+  background-color: map-get($mat-cfm, 800);
+}
+
+.mat-input-element {
+  color: $input-filed-text-color !important;
+}
+
+/* Workaround for ugly yellow autofill. */
+input:-webkit-autofill {
+  box-shadow: 0 0 0 50px map-get($mat-cfm, A700) inset;
+  -webkit-box-shadow: 0 0 0 50px map-get($mat-cfm, A700) inset;
+  -webkit-text-fill-color: $input-filed-text-color;
+}
+
+input:-webkit-autofill:focus {
+  box-shadow: 0 0 0 50px map-get($mat-cfm, A700) inset;
+  -webkit-box-shadow: 0 0 0 50px map-get($mat-cfm, A700) inset;
+  -webkit-text-fill-color: $input-filed-text-color;
+}
+
+*:focus {
+  outline: none;
+
+  /*
+  border: none;
+  outline-style: solid;
+  outline-color: map-get($mat-cfm, A100);
+  */
+}

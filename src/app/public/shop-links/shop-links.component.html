@@ -1,0 +1,24 @@
+<div class="shopLinks">
+  <div  fxLayout.xs="column"
+        fxLayout.sm="column"
+        fxLayout.md="row"
+        fxLayout.lg="row"
+        fxLayout.xl="row"
+        >
+    <div *ngIf="release.bandcampUrl">
+      <a href="{{release.bandcampUrl}}" target="_blank">Bandcamp</a>
+    </div>
+    <div *ngIf="release.beatportUrl">
+      <a href="{{release.beatportUrl}}" target="_blank">Beatport</a>
+    </div>
+    <div *ngIf="release.iTunesUrl">
+      <a href="{{release.iTunesUrl}}" target="_blank">iTunes</a>
+    </div>
+    <div *ngIf="release.junoUrl">
+      <a href="{{release.junoUrl}}" target="_blank">Juno</a>
+    </div>
+    <div *ngIf="release.spotifyUrl">
+      <a href="{{release.spotifyUrl}}" target="_blank">Spotify</a>
+    </div>
+  </div>
+</div>

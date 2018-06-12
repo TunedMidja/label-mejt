@@ -1,0 +1,23 @@
+<app-header></app-header>
+<div>
+  <h2>
+    LabelMejt - Admin dashboard
+  </h2>
+  <div class="container">
+    <div *ngIf="authenticationService.getAuthState() | async as firebaseUser; else showLogin">
+      <h4>User: {{ firebaseUser.email }}</h4>
+      <img width=32 src="{{ firebaseUser.photoURL }}">
+      <br><br>
+      <a *ngIf="authenticationService.isAdmin() | async as isAdmin; else notAuthorized" [routerLink]="['addRelease']">Releases</a>
+      <br><br>
+      <button mat-raised-button (click)="authenticationService.logout()">Logout</button>
+    </div>
+    <ng-template #showLogin>
+      <h2>Please login</h2>
+      <button mat-raised-button (click)="authenticationService.login()">Login with Google</button>
+    </ng-template>
+    <ng-template #notAuthorized>
+      <span>Logged in user is not authorized to do anything here!</span>
+    </ng-template>
+  </div>
+</div>

@@ -1,0 +1,23 @@
+@import '../../../variables.scss';
+
+.footer {
+  text-align: right;
+  font-size: 65%;
+}
+
+.footer > mat-divider {
+  margin-bottom: 8px;
+}
+
+.footer > .footer-content {
+  display: flex;
+  flex-direction: column;
+
+  span {
+    margin-top: 8px;
+  }
+}
+
+.labelmejt {
+  color: map-get($mat-cfm, 500);
+}

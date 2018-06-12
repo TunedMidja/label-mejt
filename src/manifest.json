@@ -1,0 +1,16 @@
+{
+  "name": "Crystal Fake Music",
+  "short_name": "Crystal Fake Music",
+  "start_url": "./",
+  "theme_color": "#1D1C29",
+  "background_color": "#1D1C29",
+  "display": "standalone",
+  "description": "Electronic Music Label",
+  "icons": [
+      {
+          "src": "/assets/images/CFM-logo-128px.png",
+          "sizes": "128x28",
+          "type": "image/png"
+      }
+  ]
+}

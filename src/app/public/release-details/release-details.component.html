@@ -1,0 +1,38 @@
+<app-header></app-header>
+
+<div *ngIf="releaseObservable | async as release">
+
+  <!-- XS -->
+  <div  fxLayoutAlign="space-evenly left"
+        fxLayout.xs="column"
+        fxHide.sm
+        fxHide.md
+        fxHide.lg
+        fxHide.xl
+        >
+    <app-release [release]="release"></app-release>
+    <iframe *ngIf="bandcampWidgetUrl" class="bandcampWidget bandcampWidgetXs" [src]="bandcampWidgetUrl" seamless></iframe>
+    <app-shop-links [release]="release"></app-shop-links>
+    <h4>{{release.catalogNumber}} <> {{release.releaseDate}}</h4>
+    <p class="description" [innerHtml]="descriptionHTML"></p>
+  </div>
+  <!-- SM + MD + LG + XL -->
+  <div  fxLayoutAlign="top"
+        fxHide.xs
+        fxLayout.sm="row"
+        fxLayout.md="row"
+        fxLayout.lg="row"
+        fxLayout.xl="row"
+        >
+    <div fxFlex="100%">
+      <div>
+        <app-release [release]="release"></app-release>
+        <iframe *ngIf="bandcampWidgetUrl" class="bandcampWidget bandcampWidgetSmMdLgXl" [src]="bandcampWidgetUrl" seamless></iframe>
+      </div>
+    <div fxFlex="50%">
+      <app-shop-links [release]="release"></app-shop-links>
+      <h4>{{release.catalogNumber}} <> {{release.releaseDate}}</h4>
+      <p class="description" [innerHtml]="descriptionHTML"></p>
+    </div>
+  </div>
+</div>

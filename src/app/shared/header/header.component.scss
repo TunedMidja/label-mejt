@@ -1,0 +1,12 @@
+.container {
+  display: flex;
+}
+
+.text {
+  margin: 0 0 0 4px;
+}
+
+.labelLogo {
+  // Removes blue highlighting when clicking on Android device:
+  -webkit-tap-highlight-color: transparent;
+}

@@ -1,0 +1,70 @@
+@import './variables';
+@import '~@angular/material/theming';
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat-core();
+
+/* CFM colors:
+  background-color: #1d1c29;
+  color: #eee2d9;
+*/
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://www.google.com/design/spec/style/color.html
+//$crystal-fake-music-primary: mat-palette($mat-grey);
+
+//@debug $mat-indigo;
+
+//$crystal-fake-music-primary: mat-palette($mat-lime);
+
+// The mat-indigo palette that could e used as tempalte for creating custom palette:
+/*
+$crystal-fake-music-primary: mat-palette(
+  ( 50: #e8eaf6,
+    100: #c5cae9,
+    200: #9fa8da,
+    300: #7986cb,
+    400: #5c6bc0,
+    500: #3f51b5,
+    600: #3949ab,
+    700: #303f9f,
+    800: #283593,
+    900: #1a237e,
+    A100: #8c9eff,
+    A200: #536dfe,
+    A400: #3d5afe,
+    A700: #304ffe,
+    contrast: (
+      50: rgba(0, 0, 0, 0.87),
+      100: rgba(0, 0, 0, 0.87),
+      200: rgba(0, 0, 0, 0.87),
+      300: white,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: rgba(0, 0, 0, 0.87),
+      A200: white,
+      A400: white,
+      A700: white)));
+      */
+
+$crystal-fake-music-primary: mat-palette($mat-cfm);
+$crystal-fake-music-accent: mat-palette($mat-pink, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$crystal-fake-music-warn: mat-palette($mat-red);
+
+// Create the theme object (a Sass map containing all of the palettes).
+$crystal-fake-music-theme: mat-dark-theme($crystal-fake-music-primary, $crystal-fake-music-accent, $crystal-fake-music-warn);
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include angular-material-theme($crystal-fake-music-theme);

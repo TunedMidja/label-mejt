@@ -1,0 +1,6 @@
+@import '../../../variables.scss';
+
+.container {
+  background-color: map-get($mat-cfm, A400);
+  padding: 8px;
+}

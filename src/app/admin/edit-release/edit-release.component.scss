@@ -1,0 +1,32 @@
+@import '../../../variables.scss';
+
+.edit-release-form {
+  margin-top: 16px;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  background-color: map-get($mat-cfm, A400);
+  padding: 8px;
+}
+
+.choose-cover-file-button {
+  margin-bottom: 8px;
+}
+
+.save-button {
+  margin-top: 24px;
+}
+
+.footer {
+  margin-top: 16px;
+}
+
+.footer > button {
+  float: right;
+}
+
+.description {
+  height: 120px;
+}
