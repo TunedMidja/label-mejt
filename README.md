@@ -33,7 +33,7 @@ Setup [Firebase Hosting](https://firebase.google.com/docs/hosting/).
 
 To deploy to Firebase:
 ```sh
-yarn run deploy
+yarn deploy
 ```
 
 
