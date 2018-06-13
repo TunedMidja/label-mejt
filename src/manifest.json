@@ -9,8 +9,13 @@
   "icons": [
       {
           "src": "/assets/images/CFM-logo-128px.png",
-          "sizes": "128x28",
+          "sizes": "128x128",
           "type": "image/png"
-      }
-  ]
+      },
+      {
+        "src": "/assets/images/CFM-logo-512px.png",
+        "sizes": "512x512",
+        "type": "image/png"
+    }
+]
 }
