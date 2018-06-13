@@ -19,7 +19,7 @@ Start development server:
 $ yarn dev
 ```
 
-Point your browser to *http://localhost:4200/*
+The public result of the CMS is available at *http://localhost:4200/* and the admin part at *http://localhost:4200/admin* (where you have to login with Google to be able to edit data).
 
 
 ## Testing
