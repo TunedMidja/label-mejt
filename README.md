@@ -24,7 +24,7 @@ Point your browser to *http://localhost:4200/*
 
 Run the tests:
 ```sh
-$ yarn run test
+$ yarn test
 ```
 
 ## Firebase Hosting
