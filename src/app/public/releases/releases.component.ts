@@ -15,7 +15,7 @@ export class ReleasesComponent implements OnInit {
   releases: Observable<ReleaseWithId[]>;
 
   constructor(private afs: AngularFirestore) {
-    this.releaseCollection = afs.collection<Release>('release');
+    this.releaseCollection = afs.collection<Release>('release', ref => ref.orderBy('catalogNumber', 'desc'));
     this.releases = this.releaseCollection.snapshotChanges().map(actions => {
       return actions.map(a => {
         const data = a.payload.doc.data() as Release;

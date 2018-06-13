@@ -14,7 +14,7 @@ $ nvm use
 
 Start development server:
 ```sh
-$ yarn run dev
+$ yarn dev
 ```
 
 Point your browser to *http://localhost:4200/*
